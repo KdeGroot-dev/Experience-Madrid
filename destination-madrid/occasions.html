@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occasions | Destination Madrid</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <style>
+        .occ-hero {
+            padding: calc(var(--space-xl) + 100px) 0 var(--space-xl);
+            text-align: center;
+        }
+
+        .occ-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--space-md);
+            padding: var(--space-xl) 0;
+        }
+
+        @media (max-width: 992px) {
+            .occ-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .occ-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .occ-card {
+            display: block;
+            position: relative;
+            background-color: var(--color-tertiary-dark);
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .occ-card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 1.5s ease;
+            background-color: #201e18;
+        }
+
+        .occ-card:hover .occ-card-bg {
+            transform: scale(1.05);
+        }
+
+        .occ-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(to top, rgba(15, 16, 20, 0.95) 0%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: var(--transition-smooth);
+        }
+
+        .occ-card:hover {
+            border-color: var(--color-accent-gold);
+        }
+
+        .occ-card h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-light);
+        }
+
+        .occ-card p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            margin: 0;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .occ-card:hover p {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">DESTINATION MADRID<span>The Agency</span></a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="about.html" class="nav-link" data-i18n="nav.about">The Agency</a>
+            <a href="occasions.html" class="nav-link" data-i18n="nav.occasions">Occasions</a>
+            <a href="experiences.html" class="nav-link" data-i18n="nav.experiences">Experiences</a>
+            <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container occ-hero fade-up">
+            <h1 data-i18n="occ.hero.title">Our <span class="text-accent">Occasions</span></h1>
+            <p class="mt-sm" style="max-width: 600px; margin: 1rem auto;" data-i18n="occ.hero.subtitle">Every
+                celebration requires a highly specific touch. Select an occasion below to discover how we craft entirely
+                unique moments.</p>
+        </section>
+
+        <section class="container occ-grid fade-up delay-1">
+            <a href="occasions/proposals.html" class="occ-card">
+                <div class="occ-card-bg" style="background-color: #1a1714;"></div>
+                <div class="occ-content">
+                    <h2 data-i18n="occ.prop.title">Marriage Proposals</h2>
+                    <p data-i18n="occ.prop.desc">The beginning of forever.</p>
+                </div>
+            </a>
+
+            <a href="#" class="occ-card">
+                <div class="occ-card-bg" style="background-color: #16181b;"></div>
+                <div class="occ-content">
+                    <h2 data-i18n="occ.getaway.title">Romantic Getaways</h2>
+                    <p data-i18n="occ.getaway.desc">Intimate escapes in Madrid.</p>
+                </div>
+            </a>
+
+            <a href="#" class="occ-card">
+                <div class="occ-card-bg" style="background-color: #1c1a17;"></div>
+                <div class="occ-content">
+                    <h2 data-i18n="occ.cele.title">Premium Celebrations</h2>
+                    <p data-i18n="occ.cele.desc">Birthdays, anniversaries, milestones.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer section-padding pb-sm" style="margin-top:0;">
+        <div class="container text-center fade-up">
+            <div class="logo mb-sm" style="font-size: 1.5rem; justify-content:center; align-items:center;">
+                DESTINATION MADRID
+                <span>The Agency</span>
+            </div>
+            <p class="mt-sm copyright">© 2026 Destination Madrid. <span data-i18n="footer.rights">All rights
+                    reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/i18n.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* Destination Madrid - Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-primary-dark: #0f1014;
+  --color-secondary-dark: #16181b;
+  --color-tertiary-dark: #1a1c20;
+  --color-accent-gold: #D4AF37;
+  --color-accent-light: #F2E3C6;
+  --color-text-light: #fcfbf9;
+  --color-text-muted: rgba(252, 251, 249, 0.6);
+  --color-border: rgba(212, 175, 55, 0.2);
+  --color-background: var(--color-primary-dark);
+  
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Utilities */
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-quick: all 0.3s ease;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color-background);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h1 { font-size: clamp(3rem, 6vw, 5rem); }
+h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(2rem, 3vw, 2.5rem); }
+h4 { font-size: clamp(1.5rem, 2vw, 1.75rem); }
+
+p {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 65ch;
+  font-weight: 300;
+}
+
+.text-accent {
+  color: var(--color-accent-gold);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utility Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
