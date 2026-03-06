@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Proposals | Destination Madrid</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <style>
+        .occasion-hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .occasion-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1714;
+            z-index: 1;
+        }
+
+        .occasion-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 16, 20, 0.6);
+            z-index: 2;
+        }
+
+        .occasion-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+
+        .story-section {
+            padding: var(--space-xl) 0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-section p {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--space-md);
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+            padding: var(--space-xl) 0;
+        }
+
+        @media (max-width: 768px) {
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .example-card {
+            background-color: var(--color-tertiary-dark);
+            padding: var(--space-md);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-smooth);
+        }
+
+        .example-card:hover {
+            border-color: var(--color-accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .example-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-accent-gold);
+            margin-bottom: var(--space-sm);
+        }
+
+        .cta-banner {
+            background-color: var(--color-secondary-dark);
+            padding: var(--space-xl) 0;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">DESTINATION MADRID<span>The Agency</span></a>
+        <nav class="nav">
+            <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="../about.html" class="nav-link" data-i18n="nav.about">The Agency</a>
+            <a href="../occasions.html" class="nav-link" data-i18n="nav.occasions">Occasions</a>
+            <a href="../experiences.html" class="nav-link" data-i18n="nav.experiences">Experiences</a>
+            <a href="../contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="occasion-hero">
+            <div class="occasion-bg" style="background-image: url('../assets/images/hero.png');"></div>
+            <div class="occasion-overlay"></div>
+            <div class="occasion-content fade-up">
+                <h1 style="font-size: clamp(3rem, 6vw, 4.5rem);" data-i18n="prop.hero.title">Marriage <span
+                        class="text-accent">Proposals</span>
+                </h1>
+                <p class="mt-sm hero-subtitle" style="margin-left: auto; margin-right: auto;"
+                    data-i18n="prop.hero.subtitle">The beginning of forever
+                    deserves a breathtaking prologue.</p>
+            </div>
+        </section>
+
+        <section class="story-section fade-up delay-1">
+            <div class="container">
+                <h2 data-i18n="prop.story.title">A Moment <span class="text-accent">Frozen in Time</span></h2>
+                <p class="mt-md" data-i18n="prop.story.p1">A marriage proposal is more than just a question; it is a
+                    profound declaration, a
+                    memory that you will recount to future generations. We believe this milestone should reflect the
+                    depth of your unique love story.</p>
+                <p data-i18n="prop.story.p2">Whether you envision a private quartet playing on a secluded rooftop as the
+                    sun sets over the Royal
+                    Palace, or an intimate dinner in a candlelit 16th-century chapel, our discrete and expert planning
+                    ensures every detail is flawless.</p>
+            </div>
+        </section>
+
+        <section class="container examples-grid fade-up">
+            <div class="example-card">
+                <h3 data-i18n="prop.ex1.title">The Royal Sunset</h3>
+                <p data-i18n="prop.ex1.desc">Exclusive access to a private terrace overlooking the Madrid skyline. We
+                    blanket the space in
+                    thousands of rose petals, framed by candlelight, while a hidden photographer captures the exact
+                    moment you ask.</p>
+            </div>
+            <div class="example-card">
+                <h3 data-i18n="prop.ex2.title">The Cinematic Escape</h3>
+                <p data-i18n="prop.ex2.desc">A surprise helicopter transfer from Madrid to a secluded vineyard or
+                    historical castle. A private
+                    Michelin-starred chef awaits to serve a seven-course tasting menu paired with vintage champagne.</p>
+            </div>
+        </section>
+
+        <section class="cta-banner fade-up">
+            <div class="container">
+                <h2 data-i18n="prop.cta.title">Ready to <span class="text-accent">Plan</span>?</h2>
+                <p class="mt-sm mb-md text-muted" style="max-width: 500px; margin: 1rem auto 2rem;"
+                    data-i18n="prop.cta.desc">Share your vision
+                    with us, and we will sketch the perfect setting for your question.</p>
+                <a href="../contact.html" class="btn btn-primary" data-i18n="prop.cta.btn">Start the Conversation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section-padding pb-sm" style="margin-top:0;">
+        <div class="container text-center fade-up">
+            <div class="logo mb-sm" style="font-size: 1.5rem; justify-content:center; align-items:center;">
+                DESTINATION MADRID
+                <span>The Agency</span>
+            </div>
+            <p class="mt-sm copyright">© 2026 Destination Madrid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/i18n.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

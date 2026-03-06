@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agency | Destination Madrid</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <style>
+        .about-hero {
+            padding: calc(var(--space-xl) + 100px) 0 var(--space-xl);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-lead {
+            font-size: 1.5rem;
+            color: var(--color-accent-gold);
+            margin-bottom: var(--space-md);
+            font-family: var(--font-heading);
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+            padding: var(--space-xl) 0;
+        }
+
+        .vision-image {
+            background-color: var(--color-tertiary-dark);
+            aspect-ratio: 3/4;
+            width: 100%;
+            position: relative;
+        }
+
+        .vision-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid var(--color-border);
+            z-index: -1;
+        }
+
+        @media (max-width: 992px) {
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-grid.reverse {
+                direction: rtl;
+            }
+
+            .vision-grid.reverse>* {
+                direction: ltr;
+            }
+        }
+
+        .trust-section {
+            background-color: var(--color-secondary-dark);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .logo-grid {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+            margin-top: var(--space-md);
+            opacity: 0.6;
+        }
+
+        .logo-item {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header remains identical to index.html -->
+    <header class="header">
+        <a href="index.html" class="logo">DESTINATION MADRID<span>The Agency</span></a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+            <a href="about.html" class="nav-link" data-i18n="nav.about">The Agency</a>
+            <a href="occasions.html" class="nav-link" data-i18n="nav.occasions">Occasions</a>
+            <a href="experiences.html" class="nav-link" data-i18n="nav.experiences">Experiences</a>
+            <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero fade-up">
+            <div class="container">
+                <h1 data-i18n="about.title">Crafting the <span class="text-accent">Extraordinary</span></h1>
+                <p class="about-lead mt-sm" data-i18n="about.lead">Destination Madrid was born from a desire to elevate
+                    celebrations to an art
+                    form.</p>
+                <p style="margin: 0 auto;" data-i18n="about.p1">We believe that life's most important moments deserve a
+                    setting that is
+                    nothing short of magical. Through our extensive luxury network and intimate local knowledge of
+                    Spain, we design bespoke experiences that transcend the ordinary.</p>
+            </div>
+        </section>
+
+        <section class="container vision-grid fade-up delay-1">
+            <div class="vision-image">
+                <!-- Minimal placeholder for premium team/detail shot -->
+            </div>
+            <div class="vision-text">
+                <h2 data-i18n="about.vision.title">Our <span class="text-accent">Philosophy</span></h2>
+                <p class="mt-sm" data-i18n="about.vision.p1">Exclusivity, discretion, and perfection. Every event we
+                    curate is approached with
+                    meticulous attention to detail. We do not offer packages; we offer blank canvases on which we paint
+                    your unique story.</p>
+                <p class="mt-xs" data-i18n="about.vision.p2">From securing private palaces to flying in Michelin-starred
+                    chefs for a hilltop
+                    proposal, our capabilities are limited only by imagination.</p>
+            </div>
+        </section>
+
+        <section class="trust-section mt-xl fade-up">
+            <div class="container">
+                <h2 data-i18n="about.trust.title">As Featured In</h2>
+                <p class="mt-xs text-muted" data-i18n="about.trust.subtitle">Trusted by premium brands and discerning
+                    clients worldwide.</p>
+                <div class="logo-grid">
+                    <div class="logo-item">VOGUE</div>
+                    <div class="logo-item">Condé Nast</div>
+                    <div class="logo-item">GQ</div>
+                    <div class="logo-item">Forbes</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-padding pb-sm">
+        <div class="container text-center fade-up">
+            <div class="logo mb-sm" style="font-size: 1.5rem; justify-content:center; align-items:center;">
+                DESTINATION MADRID
+                <span>The Agency</span>
+            </div>
+            <p class="mt-sm copyright">© 2026 Destination Madrid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/i18n.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
